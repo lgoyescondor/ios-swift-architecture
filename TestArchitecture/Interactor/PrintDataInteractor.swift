@@ -9,10 +9,3 @@
 import Foundation
 import RxSwift
 
-class ObservableUseCase : BaseInteractor {
-    typealias Response = Int
-    typealias Params = String
-    func buildUseCase(params: String) -> Observable<Int> {
-        return Observable.
-    }
-}
