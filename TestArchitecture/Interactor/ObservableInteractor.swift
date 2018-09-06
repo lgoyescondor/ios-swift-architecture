@@ -1,5 +1,5 @@
 //
-//  Interactor.swift
+//  ObservableInteractor.swift
 //  TestArchitecture
 //
 //  Created by Luis Goyes on 9/6/18.
@@ -9,19 +9,14 @@
 import Foundation
 import RxSwift
 
-protocol Interactor{
-    
-    associatedtype Response
-    associatedtype Params
+protocol ObservableInteractor: Interactor{
     
     func buildUseCase(params:Params)-> Observable<Response>
-    
-    func execute(params:Params, onSuccess: @escaping (Response) -> Void, onError: @escaping (Error) -> Void ) -> Disposable
 }
 
-extension Interactor {
-    
-    func execute(params:Params, onSuccess: @escaping (Response) -> Void, onError: @escaping (Error) -> Void ) -> Disposable {
+
+extension ObservableInteractor {
+    func execute(params:Params, onSuccess : @escaping (Response) -> Void ,onError: @escaping (Error) -> Void)  -> Disposable {
         return self.buildUseCase(params: params).subscribe(onNext: onSuccess,
                                                            onError: onError)
     }

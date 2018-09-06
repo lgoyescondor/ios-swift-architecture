@@ -14,7 +14,10 @@
 		A03C63592141B478004D12BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03C63572141B478004D12BF /* LaunchScreen.storyboard */; };
 		A03C63642141B478004D12BF /* TestArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C63632141B478004D12BF /* TestArchitectureTests.swift */; };
 		A03C636F2141B478004D12BF /* TestArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C636E2141B478004D12BF /* TestArchitectureUITests.swift */; };
-		A03C637E2141B4D5004D12BF /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C637D2141B4D5004D12BF /* Interactor.swift */; };
+		A03C637E2141B4D5004D12BF /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C637D2141B4D5004D12BF /* BaseInteractor.swift */; };
+		A03C63822141C169004D12BF /* PrintDataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C63812141C169004D12BF /* PrintDataInteractor.swift */; };
+		A03C63852141CDF3004D12BF /* MultipleExtesionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C63842141CDF3004D12BF /* MultipleExtesionExample.swift */; };
+		A03C63872141D1E0004D12BF /* ObservableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C63862141D1E0004D12BF /* ObservableInteractor.swift */; };
 		D47C3C48976EA7456CE5F7AF /* Pods_TestArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F81A03CBD0A62974512B073 /* Pods_TestArchitecture.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +54,10 @@
 		A03C636A2141B478004D12BF /* TestArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestArchitectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03C636E2141B478004D12BF /* TestArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestArchitectureUITests.swift; sourceTree = "<group>"; };
 		A03C63702141B478004D12BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A03C637D2141B4D5004D12BF /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		A03C637D2141B4D5004D12BF /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		A03C63812141C169004D12BF /* PrintDataInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintDataInteractor.swift; sourceTree = "<group>"; };
+		A03C63842141CDF3004D12BF /* MultipleExtesionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleExtesionExample.swift; sourceTree = "<group>"; };
+		A03C63862141D1E0004D12BF /* ObservableInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableInteractor.swift; sourceTree = "<group>"; };
 		DFC01E879978087628A534AA /* Pods-TestArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestArchitecture.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestArchitecture/Pods-TestArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +129,8 @@
 		A03C634D2141B477004D12BF /* TestArchitecture */ = {
 			isa = PBXGroup;
 			children = (
-				A03C637C2141B4C7004D12BF /* Interactors */,
+				A03C63832141CDD1004D12BF /* MultipleExtension */,
+				A03C637C2141B4C7004D12BF /* Interactor */,
 				A03C634E2141B477004D12BF /* AppDelegate.swift */,
 				A03C63502141B477004D12BF /* ViewController.swift */,
 				A03C63522141B477004D12BF /* Main.storyboard */,
@@ -152,12 +159,22 @@
 			path = TestArchitectureUITests;
 			sourceTree = "<group>";
 		};
-		A03C637C2141B4C7004D12BF /* Interactors */ = {
+		A03C637C2141B4C7004D12BF /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				A03C637D2141B4D5004D12BF /* Interactor.swift */,
+				A03C637D2141B4D5004D12BF /* BaseInteractor.swift */,
+				A03C63812141C169004D12BF /* PrintDataInteractor.swift */,
+				A03C63862141D1E0004D12BF /* ObservableInteractor.swift */,
 			);
-			path = Interactors;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		A03C63832141CDD1004D12BF /* MultipleExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A03C63842141CDF3004D12BF /* MultipleExtesionExample.swift */,
+			);
+			path = MultipleExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,8 +311,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestArchitecture/Pods-TestArchitecture-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
@@ -321,8 +336,6 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
@@ -356,15 +369,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-TestArchitecture-checkManifestLockResult.txt",
 			);
@@ -380,9 +389,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A03C637E2141B4D5004D12BF /* Interactor.swift in Sources */,
+				A03C63822141C169004D12BF /* PrintDataInteractor.swift in Sources */,
+				A03C637E2141B4D5004D12BF /* BaseInteractor.swift in Sources */,
 				A03C63512141B477004D12BF /* ViewController.swift in Sources */,
+				A03C63852141CDF3004D12BF /* MultipleExtesionExample.swift in Sources */,
 				A03C634F2141B477004D12BF /* AppDelegate.swift in Sources */,
+				A03C63872141D1E0004D12BF /* ObservableInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
