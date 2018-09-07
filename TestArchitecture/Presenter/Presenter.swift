@@ -9,8 +9,8 @@
 import Foundation
 import Swinject
 
-protocol BaseView : class {}
-protocol BasePresenter {
+protocol BaseViewProtocol {}
+protocol BasePresenterProtocol {
     associatedtype View
     var view: View? { get set }
     func bind(view: View)
@@ -18,10 +18,10 @@ protocol BasePresenter {
 }
 
 
-class BasePresenterImpl : BasePresenter {
-    var view: BaseView?
+class BasePresenter : BasePresenterProtocol {
+    var view: BaseViewProtocol?
     
-    func bind(view: BaseView) {
+    func bind(view: BaseViewProtocol) {
         self.view = view
     }
     func unBind() {
@@ -29,11 +29,13 @@ class BasePresenterImpl : BasePresenter {
     }
 }
 
-protocol LoginView : BaseView {
+// MARK - Login MVP
+
+protocol LoginViewProtocol : BaseViewProtocol {
     
 }
 
-class LoginViewImplementation : LoginView {
+class LoginView : LoginViewProtocol {
     
 }
 
@@ -41,13 +43,13 @@ protocol LoginPresenterProtocol {
     func saludar()
 }
 
-class LoginPresenter : BasePresenterImpl, LoginPresenterProtocol {
+class LoginPresenter : BasePresenter, LoginPresenterProtocol {
     
     var p = "Hola"
     
     override init() {
         super.init()
-        view = LoginViewImplementation()
+        view = LoginView()
     }
     
     func bind(view: LoginView) {
@@ -62,6 +64,20 @@ class LoginPresenter : BasePresenterImpl, LoginPresenterProtocol {
         print( p )
     }
 }
+
+class Test {
+    
+    var mPresenter : LoginPresenterProtocol = LoginPresenter()
+    var mView : LoginViewProtocol = LoginView()
+    
+    init() {
+        mPresenter.saludar()
+    }
+    
+}
+
+
+
 
 
 
