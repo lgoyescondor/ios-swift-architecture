@@ -15,9 +15,9 @@
 		A03C63642141B478004D12BF /* TestArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C63632141B478004D12BF /* TestArchitectureTests.swift */; };
 		A03C636F2141B478004D12BF /* TestArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C636E2141B478004D12BF /* TestArchitectureUITests.swift */; };
 		A03C637E2141B4D5004D12BF /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C637D2141B4D5004D12BF /* BaseInteractor.swift */; };
-		A03C63822141C169004D12BF /* PrintDataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C63812141C169004D12BF /* PrintDataInteractor.swift */; };
 		A03C63852141CDF3004D12BF /* MultipleExtesionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C63842141CDF3004D12BF /* MultipleExtesionExample.swift */; };
 		A03C63872141D1E0004D12BF /* ObservableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C63862141D1E0004D12BF /* ObservableInteractor.swift */; };
+		A0DDD2902142D3060096F958 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DDD28F2142D3060096F958 /* Presenter.swift */; };
 		D47C3C48976EA7456CE5F7AF /* Pods_TestArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F81A03CBD0A62974512B073 /* Pods_TestArchitecture.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,9 +55,9 @@
 		A03C636E2141B478004D12BF /* TestArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestArchitectureUITests.swift; sourceTree = "<group>"; };
 		A03C63702141B478004D12BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A03C637D2141B4D5004D12BF /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
-		A03C63812141C169004D12BF /* PrintDataInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintDataInteractor.swift; sourceTree = "<group>"; };
 		A03C63842141CDF3004D12BF /* MultipleExtesionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleExtesionExample.swift; sourceTree = "<group>"; };
 		A03C63862141D1E0004D12BF /* ObservableInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableInteractor.swift; sourceTree = "<group>"; };
+		A0DDD28F2142D3060096F958 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		DFC01E879978087628A534AA /* Pods-TestArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestArchitecture.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestArchitecture/Pods-TestArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +129,7 @@
 		A03C634D2141B477004D12BF /* TestArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				A0DDD28E2142D2F30096F958 /* Presenter */,
 				A03C63832141CDD1004D12BF /* MultipleExtension */,
 				A03C637C2141B4C7004D12BF /* Interactor */,
 				A03C634E2141B477004D12BF /* AppDelegate.swift */,
@@ -163,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				A03C637D2141B4D5004D12BF /* BaseInteractor.swift */,
-				A03C63812141C169004D12BF /* PrintDataInteractor.swift */,
 				A03C63862141D1E0004D12BF /* ObservableInteractor.swift */,
 			);
 			path = Interactor;
@@ -175,6 +175,14 @@
 				A03C63842141CDF3004D12BF /* MultipleExtesionExample.swift */,
 			);
 			path = MultipleExtension;
+			sourceTree = "<group>";
+		};
+		A0DDD28E2142D2F30096F958 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A0DDD28F2142D3060096F958 /* Presenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,7 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A03C63822141C169004D12BF /* PrintDataInteractor.swift in Sources */,
+				A0DDD2902142D3060096F958 /* Presenter.swift in Sources */,
 				A03C637E2141B4D5004D12BF /* BaseInteractor.swift in Sources */,
 				A03C63512141B477004D12BF /* ViewController.swift in Sources */,
 				A03C63852141CDF3004D12BF /* MultipleExtesionExample.swift in Sources */,
