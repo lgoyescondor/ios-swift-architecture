@@ -95,6 +95,7 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
   - SVProgressHUD (2.2.5)
+  - Swinject (2.4.1)
 
 DEPENDENCIES:
   - Crashlytics
@@ -116,6 +117,7 @@ DEPENDENCIES:
   - RxRealm
   - RxSwift
   - SVProgressHUD
+  - Swinject
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -148,6 +150,7 @@ SPEC REPOS:
     - RxRealm
     - RxSwift
     - SVProgressHUD
+    - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -179,7 +182,8 @@ SPEC CHECKSUMS:
   RxRealm: a6c6c0a07cb61f34209969ca6657734edfdfff30
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Swinject: f7f15a9672e99328c1f07f277091087917215700
 
-PODFILE CHECKSUM: d0f5029230e5e0cc56cf251b798262f6392fc163
+PODFILE CHECKSUM: becb031b4583de8bac117b7bb2823d8a3895307d
 
 COCOAPODS: 1.5.3

@@ -6,7 +6,7 @@ target 'TestArchitecture' do
   use_frameworks!
 
   # Pods for TestArchitecture
-  
+    pod 'Swinject'
     pod 'DropDown'
   	pod 'Fabric'
  	pod 'Crashlytics'

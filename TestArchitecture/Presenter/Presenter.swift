@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Swinject
 
 protocol BaseView : class {}
 protocol BasePresenter {
@@ -37,9 +38,12 @@ class LoginViewImplementation : LoginView {
 }
 
 protocol LoginPresenterProtocol {
+    func saludar()
 }
 
 class LoginPresenter : BasePresenterImpl, LoginPresenterProtocol {
+    
+    var p = "Hola"
     
     override init() {
         super.init()
@@ -53,8 +57,39 @@ class LoginPresenter : BasePresenterImpl, LoginPresenterProtocol {
     override func unBind() {
 
     }
+    
+    func saludar() {
+        print( p )
+    }
+}
+
+
+
+class Provider {
+    let container = Container()
+    lazy var p =  LoginPresenter()
+
+    init() {
+        p.p = "LUGO"
+        container.register(LoginPresenterProtocol.self) { _ in
+           self.p
+        }
+    }
 }
 
 class X {
-    var login : LoginPresenterProtocol = LoginPresenter()
+
+   private let  login : LoginPresenterProtocol
+    
+    init(login: LoginPresenterProtocol) {
+        self.login = login
+        login.saludar()
+    }
+}
+
+class P {
+    init() {
+        var provider = Provider()
+        let x = X(login: provider.container.resolve(LoginPresenterProtocol.self) ?? LoginPresenter())
+    }
 }
